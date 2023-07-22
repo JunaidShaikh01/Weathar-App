@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(imgaes/image.jpg)no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid rgb(225, 175, 183);
+    width: 40%;
+    height: 75vh;
+    border-radius: 15px;
+    background-color: rgba(225, 175, 183, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.inputsection {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.5em;
+}
+
+#cityName,
+#submitBtn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    padding: 0.2em;
+    border: none;
+    border-radius: 5px;
+    color: rgb(165, 87, 100);
+    background-color: rgb(248, 243, 244);
+}
+
+#submitBtn {
+    padding: 0 0.7em 0 0.7em;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    color: rgb(248, 243, 244);
+    background-color: rgb(165, 87, 100);
+    transition: 0.7s;
+}
+
+#cityName:focus {
+    outline: none;
+    padding-left: 0.2em;
+}
+
+#cityName::placeholder {
+    color: rgb(165, 87, 100);
+}
+
+#outputSection {
+    text-align: center;
+    margin-top: 1em;
+    color: rgb(63, 21, 21);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+
+/* City Details */
+
+.city-details {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 2.5rem;
+}
+
+/* tempetarure details section  */
+
+.tempetarure-details {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#temperatureInCelcius {
+    font-size: 2.5rem;
+}
+
+#temperatureInCelcius span {
+    font-size: 0.7em;
+}
+
+.image img {
+    width: 6rem;
+}
+
+
+/* Extra details section */
+#wind img,
+#humidity img,
+#sun img {
+    width: 2rem;
+    margin-top: 0;
+}
+
+.extra-details {
+    margin-top: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.extra-details h4 {
+    font-size: 1em;
+}
+
+#cityNameEnterd {
+    text-transform: uppercase;
+}
+
+#weatherStatus {
+    text-transform: uppercase;
+}
+
+
+
+/* media query 1024px */
+@media screen and (max-width:1024px) {
+    .container {
+        width: 60%;
+        height: 80vh;
+    }
+}
+
+
+/*media query 424px  */
+@media screen and (min-width:375px) and (max-width: 600px) {
+    body {
+        height: 97vh;
+        width: 100%;
+    }
+
+    .container {
+        width: 80%;
+        height: 65vh;
+    }
+
+    .inputsection {
+        margin-top: 1em;
+    }
+
+    #cityName,
+    #submitBtn {
+        font-size: 1.2em;
+        padding: 0.2em;
+    }
+
+    .city-details {
+        line-height: 1.3;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .city-details p {
+        font-size: 0.9em;
+    }
+    .extra-details{
+        margin-top: 1.4em;
+
+    }
+    .extra-details h4 {
+        font-size: 0.9em;
+    }
+
+    .extra-details p {
+        font-size: 0.8em;
+    }
+
+}
+
+@media screen and (min-width:320px) and (max-width: 375px) {
+    body {
+        height: 97vh;
+        width: 100%;
+    }
+    .container {
+        width: 82%;
+        height: 65vh;
+    }
+
+    .inputsection {
+        margin-top: 1em;
+    }
+
+    #cityName,
+    #submitBtn {
+        font-size: 1.05em;
+        padding: 0.2em;
+    }
+
+    .city-details {
+        line-height: 1.25;
+        margin-top: 1rem;
+        margin-left: 0.8rem;
+    }
+
+    .city-details p {
+        font-size: 0.9em;
+    }
+
+    .extra-details h4 {
+        font-size: 0.9em;
+    }
+
+    .extra-details p {
+        font-size: 0.8em;
+    }
+
+}

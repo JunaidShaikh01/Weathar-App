@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatehr App</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awsome link -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Raleway:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="inputsection">
+            <input type="text" name="" id="cityName" placeholder="Enter city name">
+            <button id="submitBtn" onclick="getWeather()">Search</button>
+        </div>
+        <div id="outputSection">
+            <div class="city-details">
+                <p id="cityNameEnterd">Mumabi</p>
+                <p id="cityDate"></p>
+                <p id="cityTime"></p>
+            </div>
+            <div class="tempetarure-details">
+                <div class="image">
+                    <img src="imgaes/sunWithCloud.png">
+                </div>
+                <div class="cityTemperature">
+                    <h4 id="temperatureInCelcius">26°C</h4>
+                    <p id="weatherStatus">Clouds</p>
+                </div>
+            </div>
+            <div class="extra-details">
+                <div id="wind">
+                    <img src="imgaes/wind.png" alt="error loading wind png" srcset="">
+                    <h4 id="wind">Wind</h4>
+                    <p id="windSpeedDisplay">15KMph</p>
+
+                </div>
+                <div id="humidity">
+                    <img src="imgaes/drop-of-liquid.png" alt="Error loading drop-of-liquid" srcset="">
+                    <h4 id="humidity">Humidity</h4>
+                    <p id="humidityPersent">100%</p>
+                </div>
+                <div id="sun">
+                    <img src="imgaes/thermometer.png" alt="error loading sun" srcset="">
+                    <h4 id="feelLike">Feels</h4>
+                    <p id="feelLikeTemp">26°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- custom js link -->
+<script src="script.js"></script>
+
+</html>
