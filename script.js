@@ -56,16 +56,16 @@ function getWeather() {
             let imageElement = document.getElementById('cloudImg');
             document.getElementById("weatherStatus").textContent = `${weatherReport}`
             if (weatherReport === "Clouds") {
-                imageElement.src = 'images/cloudy.png';
+                imageElement.src = 'imgaes/cloudy.png';
             }
               else if (weatherReport === "Haze") {
-                imageElement.src = 'images/haze.png';
+                imageElement.src = 'imgaes/haze.png';
             }
             else if (weatherReport === "Rain") {
-                imageElement.src = 'images/rainy-day.png';
+                imageElement.src = 'imgaes/rainy-day.png';
             }
             else{
-                imageElement.src = 'images/sunWithCloud.png';
+                imageElement.src = 'imgaes/sunWithCloud.png';
             }
             let country = result.sys.country;
             cityNameEnterd.innerHTML = (`${city} , ${country}`)
