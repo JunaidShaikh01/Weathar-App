@@ -53,15 +53,27 @@ function getWeather() {
             document.getElementById('windSpeedDisplay').textContent = `${windSpeed}KMph`
 
             let weatherReport = result.weather[0].main;
+            let imageElement = document.getElementById('cloudImg');
             document.getElementById("weatherStatus").textContent = `${weatherReport}`
-
+            if (weatherReport === "Clouds") {
+                imageElement.src = 'images/cloudy.png';
+            }
+              else if (weatherReport === "Haze") {
+                imageElement.src = 'images/haze.png';
+            }
+            else if (weatherReport === "Rain") {
+                imageElement.src = 'images/rainy-day.png';
+            }
+            else{
+                imageElement.src = 'images/sunWithCloud.png';
+            }
             let country = result.sys.country;
             cityNameEnterd.innerHTML = (`${city} , ${country}`)
 
             let feel = result.main.feels_like
             feel = Math.round(feel.toFixed(2))
             document.getElementById('feelLikeTemp').textContent = `${feel}°C`
-            console.log(result);
+            //console.log(result);
         })
 
 }
