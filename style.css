@@ -14,6 +14,9 @@ body {
 }
 
 .container {
+  display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgb(225, 175, 183);
     width: 40%;
     height: 75vh;
@@ -21,11 +24,12 @@ body {
     background-color: rgba(225, 175, 183, 0.5);
     backdrop-filter: blur(5px);
 }
-
+.subContainer{
+    width: 100%;
+}
 .inputsection {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 1.5em;
 }
 
 #cityName,
